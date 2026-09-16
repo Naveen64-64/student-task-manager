@@ -1,8 +1,15 @@
-function Navbar({name , role}) {
+import { Link } from "react-router-dom";
+import Home from "../pages/Home";
+import About from "../pages/About";x
+import Contact from "../pages/Contact"
+
+function Navbar({ greeting}) {
   return (
     <nav>
-      <h2>{name}'s Task Manager</h2>
-      <p>Role: {role}</p>
+      <h1>Hello Nani {greeting}</h1>
+      <Link to = "../pages/Home">Home</Link>
+      <Link to = "../pages/About">About</Link>
+      <Link to = "../pages/Contact">Contact</Link>
     </nav>
   );
 }
